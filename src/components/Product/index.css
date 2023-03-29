@@ -1,0 +1,59 @@
+.cardProduct {
+    width: 20vw;
+    height: 35vh;
+    padding: 5px;
+}
+
+img {
+    max-width: 120px;
+    max-height: 15vh;
+}
+
+.card-body {
+    height: 14vh;
+    bottom: 0;
+    position: relative;
+}
+
+.card-body p {
+    margin: 0;
+    padding: 0;
+}
+
+.card-title {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.addToBin {
+    font-weight: bold;
+    background-color: yellow;
+    height: 6vh;
+    border: transparent;
+    border-radius: 15px;
+
+}
+
+@media (max-width: 720px) {
+    .cardProduct {
+        width: 45vw;
+    }
+}
+
+@media (max-width: 520px) {
+    .cardProduct {
+        width: 49vw;
+        height: 35vh;
+    }
+
+    img {
+        background-size: 'cover';
+        max-width: 200px;
+        max-height: 120px;
+    }
+
+    .card-title {
+        font-size: medium;
+        font-weight: bold;
+    }
+}

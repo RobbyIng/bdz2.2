@@ -1,0 +1,52 @@
+.document {
+    margin: 0;
+}
+
+.Footer {
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clear: both;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.Footer div {
+    margin: 2% 2em 0 2em;
+    text-align: left;
+    vertical-align: top;
+    height: 100%;
+    line-height: 2em;
+}
+
+.firstFooter>h1 {
+    margin: 3%;
+}
+
+.fourthFooter>h4 {
+    margin: 0;
+}
+
+.firstFooter {
+    padding: 0 2%
+}
+
+.fourthFooter {
+    padding: 0 5%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1em;
+    color: black;
+    margin: 1em 0;
+}
+
+@media (max-width: 720px) {
+
+    .Footer {
+        flex-direction: column;
+    }
+}

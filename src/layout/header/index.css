@@ -1,0 +1,29 @@
+.wrapper {
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.search {
+    width: 30vw;
+    line-height: 3em;
+    border-radius: 25px;
+    border: transparent;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation div {
+    margin: 0 1em;
+}
+
+@media (max-width: 720px) {
+
+    .DogFood {
+        visibility: hidden;
+    }
+}
