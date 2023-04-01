@@ -13,36 +13,34 @@ export const Footer = () => {
                     <span>"Интернет-магазин DogFood.ru"</span>
                 </p>
             </div>
-            <div className='secondFooter'>
-                <a href="">Каталог</a>
-                <br />
-                <a href="">Акции</a>
-                <br />
-                <a href="">Новости</a>
-                <br />
-                <a href="">Отзывы</a>
-            </div>
-            <div className='thirdFooter'>
-                <a href="">Оплата и доставка</a>
-                <br />
-                <a href="">Часто спрашивают</a>
-                <br />
-                <a href="">Обратная связь</a>
-                <br />
-                <a href="">Контакты</a>
-            </div>
-            <div className='fourthFooter'>
-                <h4>Мы на связи</h4>
-                <h4>8 (999) 00-00-00</h4>
-                <a href="">dogfood.ru@gmail.com</a>
-                <br />
-                <i className="fa fa-brands fa-telegram"></i>
-                <i className="fa fa-brands fa-instagram"></i>
-                <i className="fa fa-brands fa-vk"></i>
-                <i className="fa fa-brands fa-whatsapp"></i>
-                <i className="fa fa-brands fa-viber"></i>
-
-            </div>
+        <nav className='secondFooter'>
+            <ul>
+                <li><a href="">Каталог</a></li>
+                <li><a href="">Акции</a></li>
+                <li><a href="">Новости</a></li>
+                <li><a href="">Отзывы</a></li>
+            </ul>
+        </nav>
+        <nav className='thirdFooter'>
+            <ul>
+                <li><a href="">Оплата и доставка</a></li>
+                <li><a href="">Часто спрашивают</a></li>
+                <li><a href="">Обратная связь</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
+        </nav>
+            <ul className='fourthFooter'>
+                <li className='BoldText'>Мы на связи</li>
+                <li className='BoldText'>8 (999) 00-00-00</li>
+                <li><a href="">dogfood.ru@gmail.com</a></li>
+                <li className='social'>
+                    <div><i className="fa fa-brands fa-telegram fa-xl"></i></div>
+                    <div><i className="fa fa-brands fa-instagram fa-xl"></i></div>
+                    <div><i className="fa fa-brands fa-vk fa-xl"></i></div>
+                    <div><i className="fa fa-brands fa-whatsapp fa-xl"></i></div>
+                    <div><i className="fa fa-brands fa-viber fa-xl"></i></div>
+                </li>
+            </ul>
         </div>
 
     )

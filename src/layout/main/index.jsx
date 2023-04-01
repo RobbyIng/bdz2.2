@@ -1,7 +1,7 @@
-import { UserApi } from "../../components/UserApi"
+import { ProductList } from "../../components/ProductList"
 
 export const Main = () => {
     return (
-        <UserApi />
+        <ProductList />
     )
 }

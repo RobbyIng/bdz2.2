@@ -13,7 +13,7 @@
     bottom: 0;
 }
 
-.Footer div {
+/* .Footer :only-child {
     margin: 2% 2em 0 2em;
     text-align: left;
     vertical-align: top;
@@ -21,28 +21,61 @@
     line-height: 2em;
 }
 
-.firstFooter>h1 {
-    margin: 3%;
-}
-
-.fourthFooter>h4 {
-    margin: 0;
-}
-
-.firstFooter {
+*/ .firstFooter {
+    margin: 2% 2em 0 2em;
+    text-align: center;
+    vertical-align: top;
+    height: 100%;
+    line-height: 2em;
     padding: 0 2%
 }
 
-.fourthFooter {
-    padding: 0 5%;
+.secondFooter {
+    margin: 2% 2em 0 2em;
+    text-align: left;
+    vertical-align: top;
+    height: 100%;
+    line-height: 2em;
+}
+.thirdFooter {
+    margin: 2% 2em 0 2em;
+    text-align: left;
+    vertical-align: top;
+    height: 100%;
+    line-height: 2em;
 }
 
+.fourthFooter {
+    margin: 2% 2em 0 2em;
+        text-align: left;
+        vertical-align: top;
+        height: 100%;
+        line-height: 2em;
+}
+
+li {
+    list-style: none;
+}
 a {
     text-decoration: none;
     font-size: 1em;
     color: black;
-    margin: 1em 0;
-}
+    margin: 0 0;
+    }
+    
+    .BoldText {
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    .social {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .social div {
+        margin: 0 2%;
+    }
 
 @media (max-width: 720px) {
 
