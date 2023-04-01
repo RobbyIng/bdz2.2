@@ -36,7 +36,7 @@ export const SignIn = () => {
 
   return (
     <div>
-      <h1>Sign In</h1>
+      <h1>Авторизация</h1>
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}

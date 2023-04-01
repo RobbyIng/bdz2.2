@@ -13,15 +13,7 @@
     bottom: 0;
 }
 
-/* .Footer :only-child {
-    margin: 2% 2em 0 2em;
-    text-align: left;
-    vertical-align: top;
-    height: 100%;
-    line-height: 2em;
-}
-
-*/ .firstFooter {
+.firstFooter {
     margin: 2% 2em 0 2em;
     text-align: center;
     vertical-align: top;

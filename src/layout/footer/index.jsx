@@ -1,6 +1,7 @@
 import './index.css'
+import React from 'react'
 
-export const Footer = () => {
+const Footer = () => {
     return (
         <div className='Footer'>
             <div className='firstFooter'>
@@ -45,3 +46,5 @@ export const Footer = () => {
 
     )
 }
+
+export const MemoFooter = React.memo(Footer)

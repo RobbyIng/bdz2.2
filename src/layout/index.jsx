@@ -1,15 +1,16 @@
-import { Footer } from "./footer"
-import { Header } from "./header"
-import { Main } from "./main"
+import { Outlet } from "react-router-dom"
+import { MemoFooter } from "./footer"
+import { MemoHeader } from "./header"
+// import { Main } from "./main"
 
 export const Layout = () =>{
     return(
     <>
-    <Header/>
+    <MemoHeader/>
     {/* <FirstContext.Provider value={valueForContext1}> */}
-        <Main/>
+        <Outlet/>
     {/* </FirstContext.Provider> */}
-    <Footer/>
+    <MemoFooter/>
     </>
     )
 }

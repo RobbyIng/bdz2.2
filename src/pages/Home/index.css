@@ -1,0 +1,7 @@
+.redColor {
+    color: black;
+}
+
+.redColor:hover {
+    color: red;
+}

@@ -1,5 +1,7 @@
 import './index.css'
-export const Header = () => {
+import React from 'react'
+
+const Header = () => {
     return (
         <div className="wrapper">
             <div className="shopName">
@@ -26,3 +28,5 @@ export const Header = () => {
         </div>
     )
 }
+
+export const MemoHeader = React.memo(Header)
