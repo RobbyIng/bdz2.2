@@ -1,9 +1,8 @@
-import { TOKEN } from "../utils/constants";
 
-export const fetchDataProducts = async (setItems) => {
+export const fetchDataProducts = async (setItems, token) => {
   const res = await fetch('https://api.react-learning.ru/products', {
     headers: {
-      Authorization: `Bearer ${TOKEN}`
+      Authorization: `Bearer ${token}`
     }
   })
   let responce = {}

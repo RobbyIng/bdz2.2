@@ -17,8 +17,16 @@
     align-items: center;
 }
 
-.navigation div {
+.navigation li {
     margin: 0 1em;
+}
+
+.exitVisible {
+    visibility: visible;
+}
+
+.exitHidden {
+    visibility: hidden;
 }
 
 @media (max-width: 720px) {

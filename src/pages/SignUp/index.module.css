@@ -1,0 +1,21 @@
+.signUpForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.linkStyle {
+    color: black;
+}
+
+.linkStyle:hover {
+    color: red;
+}
+
+.classForm {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 18px;
+    text-align: center;
+}

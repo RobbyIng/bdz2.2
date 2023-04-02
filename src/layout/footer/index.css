@@ -7,14 +7,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    clear: both;
-    position: relative;
+    position: fixed;
     width: 100%;
     bottom: 0;
 }
 
 .firstFooter {
-    margin: 2% 2em 0 2em;
+    margin: 0 2em;
     text-align: center;
     vertical-align: top;
     height: 100%;
@@ -23,26 +22,26 @@
 }
 
 .secondFooter {
-    margin: 2% 2em 0 2em;
+    margin: 0 2em;
     text-align: left;
     vertical-align: top;
     height: 100%;
-    line-height: 2em;
+    line-height: 1.5em;
 }
 .thirdFooter {
-    margin: 2% 2em 0 2em;
+    margin: 0 2em;
     text-align: left;
     vertical-align: top;
     height: 100%;
-    line-height: 2em;
+    line-height: 1.5em;
 }
 
 .fourthFooter {
-    margin: 2% 2em 0 2em;
+    margin: 0 2em;
         text-align: left;
         vertical-align: top;
         height: 100%;
-        line-height: 2em;
+        line-height: 1.5em;
 }
 
 li {
