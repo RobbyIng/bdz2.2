@@ -8,9 +8,11 @@
     justify-content: center;
     align-items: center;
     position: fixed;
+        /* position: static; */
     width: 100%;
     bottom: 0;
 }
+
 
 .firstFooter {
     margin: 0 2em;
@@ -72,5 +74,6 @@ a {
 
     .Footer {
         flex-direction: column;
+        position: static;
     }
 }

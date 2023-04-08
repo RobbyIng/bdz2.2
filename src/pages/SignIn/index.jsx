@@ -36,14 +36,14 @@ export const SignIn = () => {
   }
 
   return (
-    <div className={styles.signInForm}>
-      <h1>Авторизация</h1>
+    <div className={styles.signInForm}>      
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}
         validationSchema={signInSchema}
       >
         <Form className={styles.classForm}>
+          <h1>Авторизация</h1>
           <label htmlFor="email">Email</label>
           <Field
             id="email"
@@ -55,7 +55,7 @@ export const SignIn = () => {
           <label htmlFor="password">Password</label>
           <Field id="password" name="password" placeholder="password" type='password' />
 
-          <button type="submit">Submit</button>
+          <button className={styles.logInBtn} type="submit">Подтвердить</button>
           <p>Если вы не зарегистрированы, <Link className = {styles.linkStyle} to={'/signup'}>Регистрация</Link></p>
         </Form>
       </Formik>

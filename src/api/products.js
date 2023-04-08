@@ -19,4 +19,16 @@ export const fetchDataProducts = async (setItems, token) => {
     }
     responce = { message: answer }
   }
-}
+}  
+
+  export const fetchCurrentProduct = async (setprodCurrentItem, token, params) =>{
+    const res = await fetch(`https://api.react-learning.ru/products/${params}`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+    if (res.ok) {
+      const responce = await res.json();
+      setprodCurrentItem(responce)
+    }
+  }

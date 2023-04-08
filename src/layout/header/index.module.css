@@ -29,6 +29,9 @@
     visibility: hidden;
 }
 
+.active {
+    color: rgb(250, 150, 50);
+}
 @media (max-width: 720px) {
 
     .DogFood {

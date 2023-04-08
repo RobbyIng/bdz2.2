@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
 import {
     createBrowserRouter,
     RouterProvider,
   } from "react-router-dom";
-// import { Layout } from './layout';
 import { SignIn } from './pages/SignIn';
 import { SignUp } from './pages/SignUp';
-import { Main } from "./layout/main"
 import { Layout } from './layout';
 import { Home } from './pages/Home';
+import { UserData } from './pages/userData';
+import { ProductList } from './components/ProductList';
+import { LikedList } from './pages/Liked';
+import { BasketList } from './pages/BasketList';
+import { CurrentProduct } from './pages/CurrentProduct';
+
 
 const router = createBrowserRouter([
   {
@@ -31,8 +34,24 @@ const router = createBrowserRouter([
         element: <SignIn />
       },
       {
+        path: 'userData',
+        element: <UserData />
+      },
+      {
         path: "products",
-        element: <Main />,
+        element: <ProductList />,
+      },
+      {
+        path: "products/:idOfProduct",
+        element: <CurrentProduct />,
+      },
+      {
+        path: "liked",
+        element: <LikedList />,
+      },
+      {
+        path: "basket",
+        element: <BasketList />,
       }
     ]
   },
@@ -44,46 +63,3 @@ root.render(
      <RouterProvider router={router} />
   </React.StrictMode>
 );
-
-// // navigate('todos') : /asd -> asd/todos
-// // navigate('/todos') : /asd -> /todos
-
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Layout />,
-//     children: [
-//       {
-//         index: true,
-//         element: <Home />
-//       },
-//       {
-//         path: "todos",
-//         element: <Todos />,
-//       },
-//       {
-//         path: "todos/:idOfTodo", // :idOfTodo = параметр
-//         element: <CurrentTodo />,
-//         children: [
-//           {
-//             path: 'update',
-//             element: <UpdateForm />
-//           }
-//         ]
-//       },
-//       {
-//         path: 'contacts',
-//         element: <Contacts />
-//       }
-//     ]
-//   },
-// ]);
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <TodosContextProvider>
-//       <RouterProvider router={router} />
-//     </TodosContextProvider>
-//   </React.StrictMode>
-// );

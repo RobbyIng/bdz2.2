@@ -2,7 +2,7 @@ import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 import { signUpFetch } from '../../api/user';
 import { TOKEN } from '../../utils/constants'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react';
 import styles from './index.module.css'
 
@@ -31,35 +31,42 @@ export const SignUp = () => {
     if (res.ok) {
       const responce = await res.json()
       localStorage.setItem(TOKEN, responce.token)
-      return navigate('/signin')
+      return navigate('/signup')
     }
 
     // return
   }
 
   return (
-    <div className={styles.signUpForm}>
-      <h1>Регистрация</h1>
+    <div className={styles.signUpForm}>    
       <Formik
         initialValues={initialValuesSignUp}
         onSubmit={onSubmit}
         validationSchema={signUpSchema}
       >
         <Form className={styles.classForm}>
-          <label htmlFor="email">Email</label>
-          <Field
-            id="email"
-            name="email"
-            placeholder="jane@acme.com"
-            type="email"
-          />
+          <h1>Регистрация</h1>
+          <div className={styles.fieldHolder}>
+            <label htmlFor="email">Email</label>
+            <Field
+              className={styles.inputField}
+              id="email"
+              name="email"
+              placeholder="jane@acme.com"
+              type="email"
+            />
+          </div>
 
-          <label htmlFor="password">Password</label>
-          <Field id="password" name="password" placeholder="password" type='password' />
-          <Field id="group" name="group" placeholder="group" type='group' />
+          <div className={styles.fieldHolder}>
+            <label htmlFor="password">Password</label>
+            <Field className={styles.inputField} id="password" name="password" placeholder="password" type='password' />
+          </div>
+          <div className={styles.fieldHolder}>
+            <label htmlFor="group">Group</label>
+            <Field className={styles.inputField} id="group" name="group" placeholder="group-11" type='group' />
+          </div>
 
-          <button type="submit">Submit</button>
-          {/* <p>Если вы не зарегистрированы, <Link className = {styles.linkStyle} to={'/signup'}>Регистрация</Link></p> */}
+          <button className={styles.logUp} type="submit">Зарегистрироваться</button>
         </Form>
       </Formik>
     </div>

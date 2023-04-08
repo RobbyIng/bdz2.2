@@ -17,3 +17,16 @@ export const signUpFetch = (values) => {
     body: JSON.stringify(values)
   })
 }
+
+export const userDataFetch = async (setUserCabinetData,token) => {
+  const res = await fetch('https://api.react-learning.ru/v2/group-11/users/me', {
+    method: 'GET',
+    headers: {
+       Authorization: `Bearer ${token}`
+    },
+  })
+  if (res.ok) {
+    const responce = await res.json();
+    setUserCabinetData(responce)
+  }
+  }
