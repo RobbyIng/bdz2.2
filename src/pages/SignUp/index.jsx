@@ -1,16 +1,16 @@
-import { Formik, Field, Form } from 'formik';
-import * as Yup from 'yup';
-import { signUpFetch } from '../../api/user';
+import { Formik, Field, Form } from 'formik'
+import * as Yup from 'yup'
+import { signUpFetch } from '../../api/user'
 import { TOKEN } from '../../utils/constants'
 import { useNavigate } from 'react-router-dom'
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 import styles from './index.module.css'
 
 const signUpSchema = Yup.object().shape({
   email: Yup.string().email('Некорректный email').required('Required'),
   password: Yup.string().required('Required'),
   group: Yup.string().required('Required'),
-});
+})
 
 export const SignUp = () => {
   const navigate = useNavigate()
@@ -31,14 +31,15 @@ export const SignUp = () => {
     if (res.ok) {
       const responce = await res.json()
       localStorage.setItem(TOKEN, responce.token)
-      return navigate('/signup')
+      console.log(responce)
+      return navigate('/signin')
     }
-
+    console.log(`не прошел ${res}`)
     // return
   }
 
   return (
-    <div className={styles.signUpForm}>    
+    <div className={styles.signUpForm}>
       <Formik
         initialValues={initialValuesSignUp}
         onSubmit={onSubmit}
@@ -59,14 +60,28 @@ export const SignUp = () => {
 
           <div className={styles.fieldHolder}>
             <label htmlFor="password">Password</label>
-            <Field className={styles.inputField} id="password" name="password" placeholder="password" type='password' />
+            <Field
+              className={styles.inputField}
+              id="password"
+              name="password"
+              placeholder="password"
+              type="password"
+            />
           </div>
           <div className={styles.fieldHolder}>
             <label htmlFor="group">Group</label>
-            <Field className={styles.inputField} id="group" name="group" placeholder="group-11" type='group' />
+            <Field
+              className={styles.inputField}
+              id="group"
+              name="group"
+              placeholder="group-11"
+              type="group"
+            />
           </div>
 
-          <button className={styles.logUp} type="submit">Зарегистрироваться</button>
+          <button className={styles.logUp} type="submit">
+            Зарегистрироваться
+          </button>
         </Form>
       </Formik>
     </div>

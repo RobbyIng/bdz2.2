@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
-import { MemoFooter } from "./footer"
-import { MemoHeader } from "./header"
+import { MemoFooter } from "./Footer"
+import { MemoHeader } from "./Header"
 
 
 export const Layout = () =>{

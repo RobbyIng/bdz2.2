@@ -1,65 +1,61 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import {
-    createBrowserRouter,
-    RouterProvider,
-  } from "react-router-dom";
-import { SignIn } from './pages/SignIn';
-import { SignUp } from './pages/SignUp';
-import { Layout } from './layout';
-import { Home } from './pages/Home';
-import { UserData } from './pages/userData';
-import { ProductList } from './components/ProductList';
-import { LikedList } from './pages/Liked';
-import { BasketList } from './pages/BasketList';
-import { CurrentProduct } from './pages/CurrentProduct';
-
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { SignIn } from './pages/SignIn'
+import { SignUp } from './pages/SignUp'
+import { Layout } from './Layout'
+import { Home } from './pages/Home'
+import { UserData } from './pages/userData'
+import { ProductList } from './components/ProductList'
+import { LikedList } from './pages/Liked'
+import { BasketList } from './pages/BasketList'
+import { CurrentProduct } from './pages/CurrentProduct'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Home />,
       },
       {
         path: 'signup',
-        element: <SignUp />
+        element: <SignUp />,
       },
       {
         path: 'signin',
-        element: <SignIn />
+        element: <SignIn />,
       },
       {
         path: 'userData',
-        element: <UserData />
+        element: <UserData />,
       },
       {
-        path: "products",
+        path: 'products',
         element: <ProductList />,
       },
       {
-        path: "products/:idOfProduct",
+        path: 'products/:idOfProduct',
         element: <CurrentProduct />,
       },
       {
-        path: "liked",
+        path: 'liked',
         element: <LikedList />,
       },
       {
-        path: "basket",
+        path: 'basket',
         element: <BasketList />,
-      }
-    ]
+      },
+    ],
   },
-]);
+])
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>
-);
+)
