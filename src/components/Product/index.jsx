@@ -1,21 +1,30 @@
-import './index.css'
+import { useNavigate } from 'react-router-dom'
+import styles from './index.module.css'
 
 export const ProductItem = ({ productItem }) => {
-    return (
-        <div className="cardProduct">
-            <img
-                src={productItem.pictures}
-                className="card-img-top"
-                alt="Изображение корма для собак"
-            />
-            <div className="card-body">
-                <p className="card-title">Цена: {productItem.price}</p>
-                <p className="card-amount">{productItem.stock} шт</p>
-                <p className="card-text">{productItem.name}</p>
-            </div>
-            <div className="btnBin">
-                <button type="button" data-action="edit" className="addToBin">В корзину</button>
-            </div>
+  const navigate = useNavigate()
+  return (
+    <div className={styles.cardProduct}>
+      <div
+        className={styles.cardMain}
+        onClick={() => navigate(`/products/${productItem._id}`)}
+      >
+        <img
+          src={productItem.pictures}
+          className={styles.imgCardProduct}
+          alt="Изображение корма для собак"
+        />
+        <div className={styles.cardBody}>
+          <p className={styles.cardTitle}>Цена: {productItem.price}</p>
+          <p className={styles.cardAmount}>{productItem.stock} шт</p>
+          <p>{productItem.name}</p>
         </div>
-    )
+      </div>
+      <div className="btnBin">
+        <button type="button" data-action="edit" className={styles.addToBin}>
+          В корзину
+        </button>
+      </div>
+    </div>
+  )
 }

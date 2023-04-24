@@ -1,49 +1,64 @@
 import './index.css'
+import React from 'react'
+import {
+  secondFootElem,
+  thirdFootElem,
+  fourthFootElem,
+} from '../../utils/constants'
 
-export const Footer = () => {
-    return (
-        <div className='Footer'>
-            <div className='firstFooter'>
-                <h1>
-                    <i className="fa fa-light fa-paw fa-2xl"></i>
-                    DogFood
-                </h1>
-                <p>
-                    <i className="fa fa-light fa-shield-dog fa-xl"></i>
-                    <span>"Интернет-магазин DogFood.ru"</span>
-                </p>
-            </div>
-            <div className='secondFooter'>
-                <a href="">Каталог</a>
-                <br />
-                <a href="">Акции</a>
-                <br />
-                <a href="">Новости</a>
-                <br />
-                <a href="">Отзывы</a>
-            </div>
-            <div className='thirdFooter'>
-                <a href="">Оплата и доставка</a>
-                <br />
-                <a href="">Часто спрашивают</a>
-                <br />
-                <a href="">Обратная связь</a>
-                <br />
-                <a href="">Контакты</a>
-            </div>
-            <div className='fourthFooter'>
-                <h4>Мы на связи</h4>
-                <h4>8 (999) 00-00-00</h4>
-                <a href="">dogfood.ru@gmail.com</a>
-                <br />
-                <i className="fa fa-brands fa-telegram"></i>
-                <i className="fa fa-brands fa-instagram"></i>
-                <i className="fa fa-brands fa-vk"></i>
-                <i className="fa fa-brands fa-whatsapp"></i>
-                <i className="fa fa-brands fa-viber"></i>
-
-            </div>
-        </div>
-
-    )
+const Footer = (styleFooter) => {
+  return (
+    <div className="Footer" style={styleFooter}>
+      <div className="firstFooter">
+        <h1>
+          <i className="fa fa-light fa-paw fa-2xl"></i>
+          DogFood
+        </h1>
+        <p>
+          <i className="fa fa-light fa-shield-dog fa-xl"></i>
+          <span>"Интернет-магазин DogFood.ru"</span>
+        </p>
+      </div>
+      <nav className="secondFooter">
+        <ul>
+          {secondFootElem.map((elemLink) => {
+            return (
+              <li key={elemLink.title}>
+                <a href={elemLink.href}>{elemLink.title}</a>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
+      <nav className="thirdFooter">
+        <ul>
+          {thirdFootElem.map((elemLink) => {
+            return (
+              <li key={elemLink.title}>
+                <a href={elemLink.href}>{elemLink.title}</a>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
+      <ul className="fourthFooter">
+        <li className="BoldText">Мы на связи</li>
+        <li className="BoldText">8 (999) 00-00-00</li>
+        <li>
+          <a href="">dogfood.ru@gmail.com</a>
+        </li>
+        <li className="social">
+          {fourthFootElem.map((elemLink) => {
+            return (
+              <div key={elemLink.iClName}>
+                <i className={elemLink.iClName}></i>
+              </div>
+            )
+          })}
+        </li>
+      </ul>
+    </div>
+  )
 }
+
+export const MemoFooter = React.memo(Footer)
